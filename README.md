@@ -1,12 +1,80 @@
 # AI Trust Gate: A Reproducible Risk Classifier for LLM Requests
 
-This is the single documentation file for this project. It merges what used
+This file contains the A1 documentation (sections below "ISE-A2") merged from what used
 to be separate README.md, doc.md, docs/evidence_ledger.md,
-docs/failure_analysis.md, and docs/ISE_A1_evidence_brief.md files into one,
-with overlapping content removed. `docs/ISE_A1_assignment_brief.txt` (the
-verbatim assignment spec) remains a separate plain-text file.
+docs/failure_analysis.md, and docs/ISE_A1_evidence_brief.md files, with overlapping content removed
+(the originals remain in git commit `0909099`). `docs/ISE_A1_assignment_brief.txt` (the
+verbatim assignment spec) remains a separate plain-text file. The A2 domain model lives in `docs/a2/`.
 
-## Table of contents
+## ISE-A2: domain model and testable specification
+
+**Status:** prototype specification, not a production safety system. A2 turns the A1 workflow
+(`User request -> Trust Gate -> Allow / Block -> AI system`) into an executable domain model: `AgentAction` lifecycle
+(11 states, 11 transitions), 12 events, 6 invariants, a 12-row decision table, a context map, a data dictionary and
+governance notes. **A1 is the baseline and was not rewritten.** Where the A2 assignment prompt assumes things A1 does not
+contain (tool-using agents, a `REVIEW` outcome, human approval, audit records, embeddings), they are labelled *A2 design
+decisions*; conflicts are listed in [docs/a2/a1_baseline.md](docs/a2/a1_baseline.md).
+
+### A2 commands (run from the repository root)
+
+```bash
+# 1. environment (Python 3.13.7 was used; the lock file is from macOS, e.g. it contains appnope)
+python3.13 -m venv .venv && source .venv/bin/activate
+# 2. dependencies (exact pins; full freeze in requirements-lock.txt)
+pip install -r requirements.txt
+# 3. dataset preparation (A1, seed 42; verifies data/raw/CHECKSUMS.sha256)
+python src/prepare_data.py
+# 4. A1 model (grid search of C on the training split, one test evaluation) - A1 results must stay identical
+python src/train.py && shasum -a 256 -c results/CHECKSUMS.sha256 && shasum -a 256 -c data/raw/CHECKSUMS.sha256
+# 5. A2 domain initialisation + walkthrough (re-fits the A1 classifier, runs 9 scenarios, writes results/raw and results/processed)
+python src/run_walkthrough.py | tee results/a2_walkthrough_output.txt
+# 6. tests (about 330 tests, includes a ~15 s re-fit of the A1 model)
+python -m pytest -v | tee results/a2_test_output.txt
+# 7. type check and notebook (optional)
+mypy src/trustgate --ignore-missing-imports
+python - <<'EOF'
+import nbformat; from nbclient import NotebookClient
+nb = nbformat.read("notebooks/a2_walkthrough.ipynb", as_version=4)
+NotebookClient(nb, timeout=120, resources={"metadata": {"path": "notebooks"}}).execute()
+nbformat.write(nb, "notebooks/a2_walkthrough.ipynb")
+EOF
+# 8. integrity manifest of the A2 outputs
+shasum -a 256 -c results/A2_CHECKSUMS.sha256
+```
+
+### Frozen versions
+
+| Item | Value |
+|---|---|
+| Python | 3.13.7 |
+| Dependencies | `requirements.txt` (direct, exact pins) and `requirements-lock.txt` (`pip freeze` of a clean venv) |
+| Random seed | 42 (shuffle, 80/20 stratified split, CV, Logistic Regression) |
+| Dataset | JBB-Behaviors, 100 + 100 rows; SHA-256 in `data/raw/CHECKSUMS.sha256`; provenance and open questions in [data/README.md](data/README.md) |
+| Data-processing version | `src/prepare_data.py` at the tagged commit |
+| Model version (string recorded in audit records) | `a1-tfidf-lexicon-logreg-C0.2-seed42` |
+| Policy version | `policy-0.2.0` (REVIEW lower threshold 0.35 = *design decision*, block above 0.50 = A1 boundary) |
+| Git commit / tag | `git rev-parse HEAD`; tag `v0.2.0-a2` (local; see below) |
+
+### A2 documents (all in `docs/a2/`)
+
+`a1_baseline` (inventory + conflicts), `domain_glossary`, `context_map`, `domain_events`, `entities`, `value_objects`,
+`process_model`, `state_model`, `data_dictionary`, `data_governance`, `invariants`, `decision_table`, `model_walkthrough`,
+`failures_and_counterexamples`, `unresolved_assumptions`, `traceability`, `verification`, `ai-use-log`. Code: `src/trustgate/`
+(domain independent of any ML library; the A1 classifier is an adapter). Tests: `tests/`. Notebook: `notebooks/a2_walkthrough.ipynb`.
+Outputs: `results/raw/`, `results/processed/`, `results/a2_*`.
+
+### Main A2 findings (see the documents for evidence)
+
+- All 6 invariants hold in every executed scenario, **and still the gate ALLOWs a harmful request** (A1's known false negative,
+  `harmful_34`, score 0.3146): invariants check process consistency, not risk-estimate quality (CX-1).
+- On A1's 40 test rows the REVIEW band is never used; A2 reproduces A1's confusion matrix exactly (CX-3). The value of REVIEW is an unverified design hypothesis.
+- Nothing in A2 is evaluated on real agent traffic; thresholds are not tuned or calibrated.
+
+### Git
+
+Local commits are small and named `a2: ...`. The tag `v0.2.0-a2` is created locally; pushing it (`git push origin v0.2.0-a2`) is left to the author.
+
+## Table of contents (A1 documentation)
 
 1. [Purpose and A1 problem](#purpose-and-a1-problem)
 2. [Workflow](#workflow)
@@ -655,8 +723,8 @@ python src/compare_models.py
 - Python 3.13.7
 - `pandas==3.0.6`, `scikit-learn==1.9.1`, `numpy==2.5.3`, `scipy==1.18.1`,
   `joblib==1.6.0`, `threadpoolctl==3.7.0` (exact versions from `pip freeze`
-  in the verified environment; `requirements.txt` pins minimum-compatible
-  versions, not these exact pins, to avoid over-constraining installs)
+  in the verified environment; as of A2 `requirements.txt` pins these direct dependencies exactly and
+  `requirements-lock.txt` freezes the full environment. In A1 it pinned minimum-compatible versions only)
 
 **Artifact paths, what they contain, and how to check them:**
 

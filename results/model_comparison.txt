@@ -1,0 +1,13 @@
+AI Trust Gate - Model Comparison (reproducible)
+============================================================
+Train size: 160 | Test size: 40 | seed: 42
+CV: 5-fold x 10-repeat StratifiedKFold on the training split only (50 scored folds)
+
+Model                                                              CV mean   CV std  Train acc  Test acc
+-------------------------------------------------------------------------------------------------------
+TF-IDF + intent/framing phrases + LogisticRegression(C=0.3)  [FINAL, round-3]   0.6706   0.0641     0.7000    0.7000
+TF-IDF (word) + RandomForest(n=300)  [round-2 search]               0.5575   0.0846     1.0000    0.6250
+TF-IDF (word) + SGD(hinge, alpha=0.01)  [round-2 search]            0.5369   0.0787     0.9062    0.6500
+TF-IDF (word) + LogisticRegression(C=0.3)  [round-1 baseline]       0.5350   0.0819     0.9313    0.7250
+CountVec + ComplementNB(alpha=0.5)  [round-2 search]                0.4725   0.0731     0.9750    0.5250
+TF-IDF (word) + Voting(LR+NB+SVM)  [round-2 search]                 0.4719   0.0697     0.9812    0.5250
