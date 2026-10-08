@@ -1,0 +1,347 @@
+preset=wide: 1536 configurations x 25 folds, train n=160; test split not read unless --final-test
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+search time 936.1s (0.61s/config wall)
+
+Top 10 by mean CV ROC-AUC (training split only):
+   auc_mean  auc_std  acc_mean  recall_mean  precision_mean  logloss_mean  brier_mean                                                                                                                                                      config
+0    0.7400   0.0727    0.6775       0.7625          0.6532        0.5826      0.2028  {"C": 0.5, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 1, "min_df": 5, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": false}
+1    0.7398   0.0717    0.6750       0.7350          0.6585        0.5826      0.2037  {"C": 1.0, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 1, "min_df": 3, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": false}
+2    0.7395   0.0743    0.6887       0.7900          0.6588        0.5844      0.2039  {"C": 0.5, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 3, "min_df": 5, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": false}
+3    0.7391   0.0725    0.6787       0.7625          0.6546        0.5828      0.2029   {"C": 0.5, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 1, "min_df": 5, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": true}
+4    0.7391   0.0732    0.6750       0.7450          0.6560        0.5843      0.2046  {"C": 1.0, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 3, "min_df": 3, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": false}
+5    0.7391   0.0766    0.6675       0.7200          0.6513        0.5895      0.2062  {"C": 1.0, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 3, "min_df": 5, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": false}
+6    0.7388   0.0751    0.6637       0.7100          0.6496        0.5876      0.2054  {"C": 1.0, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 1, "min_df": 5, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": false}
+7    0.7384   0.0709    0.6763       0.7900          0.6464        0.5811      0.2022  {"C": 0.5, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 1, "min_df": 3, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": false}
+8    0.7384   0.0778    0.6700       0.7225          0.6540        0.5896      0.2064   {"C": 1.0, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 3, "min_df": 5, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": true}
+9    0.7383   0.0751    0.6813       0.7850          0.6522        0.5846      0.2040   {"C": 0.5, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 3, "min_df": 5, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": true}
+
+A1 reference configuration on the same folds:
+     auc_mean  auc_std  acc_mean  recall_mean  precision_mean  logloss_mean  brier_mean                                                                                                                                                     config
+635    0.7031   0.0710    0.6750       0.8550          0.6317        0.5927      0.2061  {"C": 0.2, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 1, "min_df": 1, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": true}
+
+Paired fold-wise AUC difference (best - A1): mean +0.0369, sd 0.0223, folds better 23/25
+configurations within 1 repeat-SE of the best: 572 (a wide plateau means the choice is not sharply identified)
+
+Effect of each factor level (best / mean CV AUC over configs using it):
+        factor  level  n_configs  best_auc  mean_auc  best_recall_at_0.5
+         ngram [1, 1]        768    0.7400    0.6665              0.7625
+         ngram [1, 2]        768    0.7353    0.6543              0.7975
+        min_df      1        384    0.7353    0.6439              0.7975
+        min_df      2        384    0.7383    0.6611              0.7925
+        min_df      3        384    0.7398    0.6682              0.7350
+        min_df      5        384    0.7400    0.6685              0.7625
+  sublinear_tf  false        768    0.7400    0.6613              0.7625
+  sublinear_tf   true        768    0.7391    0.6595              0.7625
+          char [3, 5]        768    0.7383    0.6541              0.7925
+          char   null        768    0.7400    0.6667              0.7625
+       lexicon  false        512    0.6528    0.5677              0.6650
+       lexicon   true       1024    0.7400    0.7068              0.7625
+lexicon_weight      1       1024    0.7400    0.6371              0.7625
+lexicon_weight      3        512    0.7395    0.7070              0.7900
+       penalty   "l1"        768    0.7383    0.6630              0.7925
+       penalty   "l2"        768    0.7400    0.6578              0.7625
+             C    0.1        192    0.7317    0.6591              0.8500
+             C    0.2        192    0.7364    0.6599              0.8200
+             C    0.5        192    0.7400    0.6702              0.7625
+             C    1.0        192    0.7398    0.6769              0.7350
+             C   10.0        192    0.7184    0.6469              0.6650
+             C    2.0        192    0.7380    0.6724              0.7050
+             C   20.0        192    0.7106    0.6383              0.6275
+             C    5.0        192    0.7280    0.6595              0.6775
+
+Out-of-fold policy thresholds (constraint: harmful ALLOW rate <= 0.05, review load <= 0.3): {'block_above': 0.5, 'review_lower': 0.25, 'harmful_allow_rate': 0.05, 'harmful_block_rate': 0.775, 'benign_block_rate': 0.425, 'benign_review_rate': 0.3125, 'benign_allow_rate': 0.2625, 'review_load': 0.24375}
+
+wrote /Users/sha/Desktop/AiTrustGate/results/tuning/wide/all_configs.csv, threshold_table_oof.csv, summary.json
