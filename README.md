@@ -40,7 +40,9 @@ nbformat.write(nb, "notebooks/a2_walkthrough.ipynb")
 EOF
 # 8. optional: configuration search on the training split only (presets quick | standard | wide in configs/tuning_grid.json)
 python src/tune_config.py --preset standard            # add --final-test to evaluate the held-out split ONCE
-# 9. integrity manifest of the A2 outputs
+# 9. figures (diagrams from the code; ROC and radar re-fit the A1 and selected models) -> figures/*.png
+python src/make_figures.py
+# 10. integrity manifest of the A2 outputs
 shasum -a 256 -c results/A2_CHECKSUMS.sha256
 ```
 
