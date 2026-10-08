@@ -1,7 +1,8 @@
 Dataset size: 200 | Train size: 160 | Test size: 40 | Random seed: 42
-Model: TF-IDF (sublinear_tf=True) + LogisticRegression (C=0.3)
-Accuracy (held-out test set): 0.7250
-5-fold CV accuracy on training split: 0.5375 (+/- 0.0415)
+Model: TF-IDF (sublinear_tf=True) + intent/framing phrase-count features + LogisticRegression (C=0.2, selected via GridSearchCV)
+Training-set accuracy (fit check, not a generalization estimate): 0.6875
+Accuracy (held-out test set, evaluated once): 0.7000
+5-fold x 10-repeat CV accuracy on training split (best C=0.2): 0.6706 (+/- 0.0629)
 
 AI Trust Gate - Evaluation Report
 ========================================
@@ -9,14 +10,14 @@ AI Trust Gate - Evaluation Report
 Classification report:
               precision    recall  f1-score   support
 
-      benign       0.76      0.65      0.70        20
-     harmful       0.70      0.80      0.74        20
+      benign       0.90      0.45      0.60        20
+     harmful       0.63      0.95      0.76        20
 
-    accuracy                           0.72        40
-   macro avg       0.73      0.73      0.72        40
-weighted avg       0.73      0.72      0.72        40
+    accuracy                           0.70        40
+   macro avg       0.77      0.70      0.68        40
+weighted avg       0.77      0.70      0.68        40
 
 Confusion matrix (rows = actual, columns = predicted):
 labels: ['benign', 'harmful']
-[[13  7]
- [ 4 16]]
+[[ 9 11]
+ [ 1 19]]
