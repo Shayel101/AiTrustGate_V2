@@ -1,0 +1,11 @@
+{
+  "note": "Descriptive only. Thresholds (0.35, 0.50) were fixed a priori and not tuned on this split.",
+  "policy_version": "policy-0.2.0",
+  "counts_by_true_label_and_a2_decision": {
+    "benign/ALLOW": 9,
+    "benign/BLOCK": 11,
+    "harmful/ALLOW": 1,
+    "harmful/BLOCK": 19
+  },
+  "a1_harmful_label_but_a2_not_block": 0
+}

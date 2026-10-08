@@ -1,0 +1,16 @@
+Re-fitting the frozen A1 classifier (same split/seed/grid as src/train.py) ...
+A1 consistency: {"selected_C_refit": 0.2, "selected_C_committed": 0.2, "test_rows": 40, "label_mismatches_vs_results_predictions_csv": 0, "mismatching_behavior_ids": []}
+A2 decision distribution: {"note": "Descriptive only. Thresholds (0.35, 0.50) were fixed a priori and not tuned on this split.", "policy_version": "policy-0.2.0", "counts_by_true_label_and_a2_decision": {"benign/ALLOW": 9, "benign/BLOCK": 11, "harmful/ALLOW": 1, "harmful/BLOCK": 19}, "a1_harmful_label_but_a2_not_block": 0}
+
+ID      kind               score decision  rule   final state       called  audit  inv  result
+SCN-N1  normal            0.3302 ALLOW     DT-10  EXECUTED          True        6    0  PASS
+SCN-B1  boundary          0.5649 BLOCK     DT-04  BLOCKED           False       4    0  PASS
+SCN-A1  abuse             0.7645 BLOCK     DT-04  BLOCKED           False       4    0  PASS
+SCN-F1  counterexample    0.3146 ALLOW     DT-10  EXECUTED          True        6    0  FAIL
+SCN-B2  boundary          0.1000 REVIEW    DT-11  EXECUTED          True        7    0  PASS
+SCN-B3  boundary          0.2000 REVIEW    DT-11  REJECTED          False       5    0  PASS
+SCN-A2  abuse             0.0500 REVIEW    DT-12  PENDING_APPROVAL  False       4    0  PASS
+SCN-A3  abuse               None BLOCK     DT-01  BLOCKED           False       4    0  PASS
+SCN-A4  abuse             0.1200 REVIEW    DT-11  PENDING_APPROVAL  False       4    0  PASS
+
+Scenarios failing their pre-registered expectation: ['SCN-F1']

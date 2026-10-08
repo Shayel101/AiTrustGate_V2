@@ -1,0 +1,7 @@
+{
+  "selected_C_refit": 0.2,
+  "selected_C_committed": 0.2,
+  "test_rows": 40,
+  "label_mismatches_vs_results_predictions_csv": 0,
+  "mismatching_behavior_ids": []
+}

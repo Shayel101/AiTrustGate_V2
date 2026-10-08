@@ -1,0 +1,744 @@
+...................................................FFFFFFFFFFF.......... [ 25%]
+........................................................................ [ 51%]
+.............................FFFF....................................... [ 76%]
+.................................................................        [100%]
+=================================== FAILURES ===================================
+_ test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-PROPOSED] _
+
+state = <ActionState.PROPOSED: 'PROPOSED'>
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    @pytest.mark.parametrize("state", list(S))
+    @pytest.mark.parametrize("event", ACTION_EVENTS)
+    def test_every_state_event_pair_is_allowed_iff_in_the_transition_table(state, event):
+        a = _fresh(state)
+        allowed = TRANSITIONS.get((state, event), frozenset())
+        if allowed:
+            _fire(a, event)
+            assert a.state in allowed
+        else:
+            with pytest.raises(InvalidTransitionError):
+>               _fire(a, event)
+
+tests/test_state_transitions.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = AgentAction(action_id='A-1', request_id='R-1', request_text='SYNTHETIC test request text', tool_name='llm_generate', t...<ActionState.PROPOSED: 'PROPOSED'>, at=datetime.datetime(2026, 10, 8, 9, 0, tzinfo=datetime.timezone.utc), detail='')])
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    def _fire(a: AgentAction, event: E) -> None:
+        t = datetime(2026, 10, 8, 9, 5, 0, tzinfo=timezone.utc)
+        if event is E.ACTION_NORMALIZED:
+            a.normalize(t)
+        elif event is E.RISK_ASSESSED:
+            a.record_risk(RiskScore(0.1), "m", t)
+        elif event is E.ACTION_ALLOWED:
+            a.risk_score = RiskScore(0.1); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_REQUESTED:
+            a.risk_score = RiskScore(0.4); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.ACTION_BLOCKED:
+            a.risk_score = RiskScore(0.9); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_GRANTED:
+            a.grant_approval(REVIEWER, t)
+        elif event is E.HUMAN_APPROVAL_REJECTED:
+            a.reject_approval(REVIEWER, t)
+        elif event is E.TOOL_EXECUTION_STARTED:
+            a.start_execution(t)
+        elif event is E.TOOL_EXECUTION_COMPLETED:
+            a.complete_execution(t)
+        elif event is E.TOOL_EXECUTION_FAILED:
+            a.fail_execution(t)
+        else:  # pragma: no cover
+>           raise AssertionError(event)
+E           AssertionError: EventType.ACTION_PROPOSED
+
+tests/test_state_transitions.py:53: AssertionError
+_ test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-NORMALIZED] _
+
+state = <ActionState.NORMALIZED: 'NORMALIZED'>
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    @pytest.mark.parametrize("state", list(S))
+    @pytest.mark.parametrize("event", ACTION_EVENTS)
+    def test_every_state_event_pair_is_allowed_iff_in_the_transition_table(state, event):
+        a = _fresh(state)
+        allowed = TRANSITIONS.get((state, event), frozenset())
+        if allowed:
+            _fire(a, event)
+            assert a.state in allowed
+        else:
+            with pytest.raises(InvalidTransitionError):
+>               _fire(a, event)
+
+tests/test_state_transitions.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = AgentAction(action_id='A-1', request_id='R-1', request_text='SYNTHETIC test request text', tool_name='llm_generate', t...<ActionState.PROPOSED: 'PROPOSED'>, at=datetime.datetime(2026, 10, 8, 9, 0, tzinfo=datetime.timezone.utc), detail='')])
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    def _fire(a: AgentAction, event: E) -> None:
+        t = datetime(2026, 10, 8, 9, 5, 0, tzinfo=timezone.utc)
+        if event is E.ACTION_NORMALIZED:
+            a.normalize(t)
+        elif event is E.RISK_ASSESSED:
+            a.record_risk(RiskScore(0.1), "m", t)
+        elif event is E.ACTION_ALLOWED:
+            a.risk_score = RiskScore(0.1); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_REQUESTED:
+            a.risk_score = RiskScore(0.4); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.ACTION_BLOCKED:
+            a.risk_score = RiskScore(0.9); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_GRANTED:
+            a.grant_approval(REVIEWER, t)
+        elif event is E.HUMAN_APPROVAL_REJECTED:
+            a.reject_approval(REVIEWER, t)
+        elif event is E.TOOL_EXECUTION_STARTED:
+            a.start_execution(t)
+        elif event is E.TOOL_EXECUTION_COMPLETED:
+            a.complete_execution(t)
+        elif event is E.TOOL_EXECUTION_FAILED:
+            a.fail_execution(t)
+        else:  # pragma: no cover
+>           raise AssertionError(event)
+E           AssertionError: EventType.ACTION_PROPOSED
+
+tests/test_state_transitions.py:53: AssertionError
+_ test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-RISK_ASSESSED] _
+
+state = <ActionState.RISK_ASSESSED: 'RISK_ASSESSED'>
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    @pytest.mark.parametrize("state", list(S))
+    @pytest.mark.parametrize("event", ACTION_EVENTS)
+    def test_every_state_event_pair_is_allowed_iff_in_the_transition_table(state, event):
+        a = _fresh(state)
+        allowed = TRANSITIONS.get((state, event), frozenset())
+        if allowed:
+            _fire(a, event)
+            assert a.state in allowed
+        else:
+            with pytest.raises(InvalidTransitionError):
+>               _fire(a, event)
+
+tests/test_state_transitions.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = AgentAction(action_id='A-1', request_id='R-1', request_text='SYNTHETIC test request text', tool_name='llm_generate', t...<ActionState.PROPOSED: 'PROPOSED'>, at=datetime.datetime(2026, 10, 8, 9, 0, tzinfo=datetime.timezone.utc), detail='')])
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    def _fire(a: AgentAction, event: E) -> None:
+        t = datetime(2026, 10, 8, 9, 5, 0, tzinfo=timezone.utc)
+        if event is E.ACTION_NORMALIZED:
+            a.normalize(t)
+        elif event is E.RISK_ASSESSED:
+            a.record_risk(RiskScore(0.1), "m", t)
+        elif event is E.ACTION_ALLOWED:
+            a.risk_score = RiskScore(0.1); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_REQUESTED:
+            a.risk_score = RiskScore(0.4); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.ACTION_BLOCKED:
+            a.risk_score = RiskScore(0.9); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_GRANTED:
+            a.grant_approval(REVIEWER, t)
+        elif event is E.HUMAN_APPROVAL_REJECTED:
+            a.reject_approval(REVIEWER, t)
+        elif event is E.TOOL_EXECUTION_STARTED:
+            a.start_execution(t)
+        elif event is E.TOOL_EXECUTION_COMPLETED:
+            a.complete_execution(t)
+        elif event is E.TOOL_EXECUTION_FAILED:
+            a.fail_execution(t)
+        else:  # pragma: no cover
+>           raise AssertionError(event)
+E           AssertionError: EventType.ACTION_PROPOSED
+
+tests/test_state_transitions.py:53: AssertionError
+_ test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-ALLOWED] _
+
+state = <ActionState.ALLOWED: 'ALLOWED'>
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    @pytest.mark.parametrize("state", list(S))
+    @pytest.mark.parametrize("event", ACTION_EVENTS)
+    def test_every_state_event_pair_is_allowed_iff_in_the_transition_table(state, event):
+        a = _fresh(state)
+        allowed = TRANSITIONS.get((state, event), frozenset())
+        if allowed:
+            _fire(a, event)
+            assert a.state in allowed
+        else:
+            with pytest.raises(InvalidTransitionError):
+>               _fire(a, event)
+
+tests/test_state_transitions.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = AgentAction(action_id='A-1', request_id='R-1', request_text='SYNTHETIC test request text', tool_name='llm_generate', t...<ActionState.PROPOSED: 'PROPOSED'>, at=datetime.datetime(2026, 10, 8, 9, 0, tzinfo=datetime.timezone.utc), detail='')])
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    def _fire(a: AgentAction, event: E) -> None:
+        t = datetime(2026, 10, 8, 9, 5, 0, tzinfo=timezone.utc)
+        if event is E.ACTION_NORMALIZED:
+            a.normalize(t)
+        elif event is E.RISK_ASSESSED:
+            a.record_risk(RiskScore(0.1), "m", t)
+        elif event is E.ACTION_ALLOWED:
+            a.risk_score = RiskScore(0.1); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_REQUESTED:
+            a.risk_score = RiskScore(0.4); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.ACTION_BLOCKED:
+            a.risk_score = RiskScore(0.9); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_GRANTED:
+            a.grant_approval(REVIEWER, t)
+        elif event is E.HUMAN_APPROVAL_REJECTED:
+            a.reject_approval(REVIEWER, t)
+        elif event is E.TOOL_EXECUTION_STARTED:
+            a.start_execution(t)
+        elif event is E.TOOL_EXECUTION_COMPLETED:
+            a.complete_execution(t)
+        elif event is E.TOOL_EXECUTION_FAILED:
+            a.fail_execution(t)
+        else:  # pragma: no cover
+>           raise AssertionError(event)
+E           AssertionError: EventType.ACTION_PROPOSED
+
+tests/test_state_transitions.py:53: AssertionError
+_ test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-PENDING_APPROVAL] _
+
+state = <ActionState.PENDING_APPROVAL: 'PENDING_APPROVAL'>
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    @pytest.mark.parametrize("state", list(S))
+    @pytest.mark.parametrize("event", ACTION_EVENTS)
+    def test_every_state_event_pair_is_allowed_iff_in_the_transition_table(state, event):
+        a = _fresh(state)
+        allowed = TRANSITIONS.get((state, event), frozenset())
+        if allowed:
+            _fire(a, event)
+            assert a.state in allowed
+        else:
+            with pytest.raises(InvalidTransitionError):
+>               _fire(a, event)
+
+tests/test_state_transitions.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = AgentAction(action_id='A-1', request_id='R-1', request_text='SYNTHETIC test request text', tool_name='llm_generate', t...<ActionState.PROPOSED: 'PROPOSED'>, at=datetime.datetime(2026, 10, 8, 9, 0, tzinfo=datetime.timezone.utc), detail='')])
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    def _fire(a: AgentAction, event: E) -> None:
+        t = datetime(2026, 10, 8, 9, 5, 0, tzinfo=timezone.utc)
+        if event is E.ACTION_NORMALIZED:
+            a.normalize(t)
+        elif event is E.RISK_ASSESSED:
+            a.record_risk(RiskScore(0.1), "m", t)
+        elif event is E.ACTION_ALLOWED:
+            a.risk_score = RiskScore(0.1); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_REQUESTED:
+            a.risk_score = RiskScore(0.4); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.ACTION_BLOCKED:
+            a.risk_score = RiskScore(0.9); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_GRANTED:
+            a.grant_approval(REVIEWER, t)
+        elif event is E.HUMAN_APPROVAL_REJECTED:
+            a.reject_approval(REVIEWER, t)
+        elif event is E.TOOL_EXECUTION_STARTED:
+            a.start_execution(t)
+        elif event is E.TOOL_EXECUTION_COMPLETED:
+            a.complete_execution(t)
+        elif event is E.TOOL_EXECUTION_FAILED:
+            a.fail_execution(t)
+        else:  # pragma: no cover
+>           raise AssertionError(event)
+E           AssertionError: EventType.ACTION_PROPOSED
+
+tests/test_state_transitions.py:53: AssertionError
+_ test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-BLOCKED] _
+
+state = <ActionState.BLOCKED: 'BLOCKED'>
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    @pytest.mark.parametrize("state", list(S))
+    @pytest.mark.parametrize("event", ACTION_EVENTS)
+    def test_every_state_event_pair_is_allowed_iff_in_the_transition_table(state, event):
+        a = _fresh(state)
+        allowed = TRANSITIONS.get((state, event), frozenset())
+        if allowed:
+            _fire(a, event)
+            assert a.state in allowed
+        else:
+            with pytest.raises(InvalidTransitionError):
+>               _fire(a, event)
+
+tests/test_state_transitions.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = AgentAction(action_id='A-1', request_id='R-1', request_text='SYNTHETIC test request text', tool_name='llm_generate', t...<ActionState.PROPOSED: 'PROPOSED'>, at=datetime.datetime(2026, 10, 8, 9, 0, tzinfo=datetime.timezone.utc), detail='')])
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    def _fire(a: AgentAction, event: E) -> None:
+        t = datetime(2026, 10, 8, 9, 5, 0, tzinfo=timezone.utc)
+        if event is E.ACTION_NORMALIZED:
+            a.normalize(t)
+        elif event is E.RISK_ASSESSED:
+            a.record_risk(RiskScore(0.1), "m", t)
+        elif event is E.ACTION_ALLOWED:
+            a.risk_score = RiskScore(0.1); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_REQUESTED:
+            a.risk_score = RiskScore(0.4); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.ACTION_BLOCKED:
+            a.risk_score = RiskScore(0.9); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_GRANTED:
+            a.grant_approval(REVIEWER, t)
+        elif event is E.HUMAN_APPROVAL_REJECTED:
+            a.reject_approval(REVIEWER, t)
+        elif event is E.TOOL_EXECUTION_STARTED:
+            a.start_execution(t)
+        elif event is E.TOOL_EXECUTION_COMPLETED:
+            a.complete_execution(t)
+        elif event is E.TOOL_EXECUTION_FAILED:
+            a.fail_execution(t)
+        else:  # pragma: no cover
+>           raise AssertionError(event)
+E           AssertionError: EventType.ACTION_PROPOSED
+
+tests/test_state_transitions.py:53: AssertionError
+_ test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-APPROVED] _
+
+state = <ActionState.APPROVED: 'APPROVED'>
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    @pytest.mark.parametrize("state", list(S))
+    @pytest.mark.parametrize("event", ACTION_EVENTS)
+    def test_every_state_event_pair_is_allowed_iff_in_the_transition_table(state, event):
+        a = _fresh(state)
+        allowed = TRANSITIONS.get((state, event), frozenset())
+        if allowed:
+            _fire(a, event)
+            assert a.state in allowed
+        else:
+            with pytest.raises(InvalidTransitionError):
+>               _fire(a, event)
+
+tests/test_state_transitions.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = AgentAction(action_id='A-1', request_id='R-1', request_text='SYNTHETIC test request text', tool_name='llm_generate', t...<ActionState.PROPOSED: 'PROPOSED'>, at=datetime.datetime(2026, 10, 8, 9, 0, tzinfo=datetime.timezone.utc), detail='')])
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    def _fire(a: AgentAction, event: E) -> None:
+        t = datetime(2026, 10, 8, 9, 5, 0, tzinfo=timezone.utc)
+        if event is E.ACTION_NORMALIZED:
+            a.normalize(t)
+        elif event is E.RISK_ASSESSED:
+            a.record_risk(RiskScore(0.1), "m", t)
+        elif event is E.ACTION_ALLOWED:
+            a.risk_score = RiskScore(0.1); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_REQUESTED:
+            a.risk_score = RiskScore(0.4); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.ACTION_BLOCKED:
+            a.risk_score = RiskScore(0.9); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_GRANTED:
+            a.grant_approval(REVIEWER, t)
+        elif event is E.HUMAN_APPROVAL_REJECTED:
+            a.reject_approval(REVIEWER, t)
+        elif event is E.TOOL_EXECUTION_STARTED:
+            a.start_execution(t)
+        elif event is E.TOOL_EXECUTION_COMPLETED:
+            a.complete_execution(t)
+        elif event is E.TOOL_EXECUTION_FAILED:
+            a.fail_execution(t)
+        else:  # pragma: no cover
+>           raise AssertionError(event)
+E           AssertionError: EventType.ACTION_PROPOSED
+
+tests/test_state_transitions.py:53: AssertionError
+_ test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-REJECTED] _
+
+state = <ActionState.REJECTED: 'REJECTED'>
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    @pytest.mark.parametrize("state", list(S))
+    @pytest.mark.parametrize("event", ACTION_EVENTS)
+    def test_every_state_event_pair_is_allowed_iff_in_the_transition_table(state, event):
+        a = _fresh(state)
+        allowed = TRANSITIONS.get((state, event), frozenset())
+        if allowed:
+            _fire(a, event)
+            assert a.state in allowed
+        else:
+            with pytest.raises(InvalidTransitionError):
+>               _fire(a, event)
+
+tests/test_state_transitions.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = AgentAction(action_id='A-1', request_id='R-1', request_text='SYNTHETIC test request text', tool_name='llm_generate', t...<ActionState.PROPOSED: 'PROPOSED'>, at=datetime.datetime(2026, 10, 8, 9, 0, tzinfo=datetime.timezone.utc), detail='')])
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    def _fire(a: AgentAction, event: E) -> None:
+        t = datetime(2026, 10, 8, 9, 5, 0, tzinfo=timezone.utc)
+        if event is E.ACTION_NORMALIZED:
+            a.normalize(t)
+        elif event is E.RISK_ASSESSED:
+            a.record_risk(RiskScore(0.1), "m", t)
+        elif event is E.ACTION_ALLOWED:
+            a.risk_score = RiskScore(0.1); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_REQUESTED:
+            a.risk_score = RiskScore(0.4); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.ACTION_BLOCKED:
+            a.risk_score = RiskScore(0.9); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_GRANTED:
+            a.grant_approval(REVIEWER, t)
+        elif event is E.HUMAN_APPROVAL_REJECTED:
+            a.reject_approval(REVIEWER, t)
+        elif event is E.TOOL_EXECUTION_STARTED:
+            a.start_execution(t)
+        elif event is E.TOOL_EXECUTION_COMPLETED:
+            a.complete_execution(t)
+        elif event is E.TOOL_EXECUTION_FAILED:
+            a.fail_execution(t)
+        else:  # pragma: no cover
+>           raise AssertionError(event)
+E           AssertionError: EventType.ACTION_PROPOSED
+
+tests/test_state_transitions.py:53: AssertionError
+_ test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-EXECUTING] _
+
+state = <ActionState.EXECUTING: 'EXECUTING'>
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    @pytest.mark.parametrize("state", list(S))
+    @pytest.mark.parametrize("event", ACTION_EVENTS)
+    def test_every_state_event_pair_is_allowed_iff_in_the_transition_table(state, event):
+        a = _fresh(state)
+        allowed = TRANSITIONS.get((state, event), frozenset())
+        if allowed:
+            _fire(a, event)
+            assert a.state in allowed
+        else:
+            with pytest.raises(InvalidTransitionError):
+>               _fire(a, event)
+
+tests/test_state_transitions.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = AgentAction(action_id='A-1', request_id='R-1', request_text='SYNTHETIC test request text', tool_name='llm_generate', t...<ActionState.PROPOSED: 'PROPOSED'>, at=datetime.datetime(2026, 10, 8, 9, 0, tzinfo=datetime.timezone.utc), detail='')])
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    def _fire(a: AgentAction, event: E) -> None:
+        t = datetime(2026, 10, 8, 9, 5, 0, tzinfo=timezone.utc)
+        if event is E.ACTION_NORMALIZED:
+            a.normalize(t)
+        elif event is E.RISK_ASSESSED:
+            a.record_risk(RiskScore(0.1), "m", t)
+        elif event is E.ACTION_ALLOWED:
+            a.risk_score = RiskScore(0.1); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_REQUESTED:
+            a.risk_score = RiskScore(0.4); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.ACTION_BLOCKED:
+            a.risk_score = RiskScore(0.9); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_GRANTED:
+            a.grant_approval(REVIEWER, t)
+        elif event is E.HUMAN_APPROVAL_REJECTED:
+            a.reject_approval(REVIEWER, t)
+        elif event is E.TOOL_EXECUTION_STARTED:
+            a.start_execution(t)
+        elif event is E.TOOL_EXECUTION_COMPLETED:
+            a.complete_execution(t)
+        elif event is E.TOOL_EXECUTION_FAILED:
+            a.fail_execution(t)
+        else:  # pragma: no cover
+>           raise AssertionError(event)
+E           AssertionError: EventType.ACTION_PROPOSED
+
+tests/test_state_transitions.py:53: AssertionError
+_ test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-EXECUTED] _
+
+state = <ActionState.EXECUTED: 'EXECUTED'>
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    @pytest.mark.parametrize("state", list(S))
+    @pytest.mark.parametrize("event", ACTION_EVENTS)
+    def test_every_state_event_pair_is_allowed_iff_in_the_transition_table(state, event):
+        a = _fresh(state)
+        allowed = TRANSITIONS.get((state, event), frozenset())
+        if allowed:
+            _fire(a, event)
+            assert a.state in allowed
+        else:
+            with pytest.raises(InvalidTransitionError):
+>               _fire(a, event)
+
+tests/test_state_transitions.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = AgentAction(action_id='A-1', request_id='R-1', request_text='SYNTHETIC test request text', tool_name='llm_generate', t...<ActionState.PROPOSED: 'PROPOSED'>, at=datetime.datetime(2026, 10, 8, 9, 0, tzinfo=datetime.timezone.utc), detail='')])
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    def _fire(a: AgentAction, event: E) -> None:
+        t = datetime(2026, 10, 8, 9, 5, 0, tzinfo=timezone.utc)
+        if event is E.ACTION_NORMALIZED:
+            a.normalize(t)
+        elif event is E.RISK_ASSESSED:
+            a.record_risk(RiskScore(0.1), "m", t)
+        elif event is E.ACTION_ALLOWED:
+            a.risk_score = RiskScore(0.1); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_REQUESTED:
+            a.risk_score = RiskScore(0.4); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.ACTION_BLOCKED:
+            a.risk_score = RiskScore(0.9); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_GRANTED:
+            a.grant_approval(REVIEWER, t)
+        elif event is E.HUMAN_APPROVAL_REJECTED:
+            a.reject_approval(REVIEWER, t)
+        elif event is E.TOOL_EXECUTION_STARTED:
+            a.start_execution(t)
+        elif event is E.TOOL_EXECUTION_COMPLETED:
+            a.complete_execution(t)
+        elif event is E.TOOL_EXECUTION_FAILED:
+            a.fail_execution(t)
+        else:  # pragma: no cover
+>           raise AssertionError(event)
+E           AssertionError: EventType.ACTION_PROPOSED
+
+tests/test_state_transitions.py:53: AssertionError
+_ test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-EXECUTION_FAILED] _
+
+state = <ActionState.EXECUTION_FAILED: 'EXECUTION_FAILED'>
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    @pytest.mark.parametrize("state", list(S))
+    @pytest.mark.parametrize("event", ACTION_EVENTS)
+    def test_every_state_event_pair_is_allowed_iff_in_the_transition_table(state, event):
+        a = _fresh(state)
+        allowed = TRANSITIONS.get((state, event), frozenset())
+        if allowed:
+            _fire(a, event)
+            assert a.state in allowed
+        else:
+            with pytest.raises(InvalidTransitionError):
+>               _fire(a, event)
+
+tests/test_state_transitions.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = AgentAction(action_id='A-1', request_id='R-1', request_text='SYNTHETIC test request text', tool_name='llm_generate', t...<ActionState.PROPOSED: 'PROPOSED'>, at=datetime.datetime(2026, 10, 8, 9, 0, tzinfo=datetime.timezone.utc), detail='')])
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    def _fire(a: AgentAction, event: E) -> None:
+        t = datetime(2026, 10, 8, 9, 5, 0, tzinfo=timezone.utc)
+        if event is E.ACTION_NORMALIZED:
+            a.normalize(t)
+        elif event is E.RISK_ASSESSED:
+            a.record_risk(RiskScore(0.1), "m", t)
+        elif event is E.ACTION_ALLOWED:
+            a.risk_score = RiskScore(0.1); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_REQUESTED:
+            a.risk_score = RiskScore(0.4); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.ACTION_BLOCKED:
+            a.risk_score = RiskScore(0.9); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_GRANTED:
+            a.grant_approval(REVIEWER, t)
+        elif event is E.HUMAN_APPROVAL_REJECTED:
+            a.reject_approval(REVIEWER, t)
+        elif event is E.TOOL_EXECUTION_STARTED:
+            a.start_execution(t)
+        elif event is E.TOOL_EXECUTION_COMPLETED:
+            a.complete_execution(t)
+        elif event is E.TOOL_EXECUTION_FAILED:
+            a.fail_execution(t)
+        else:  # pragma: no cover
+>           raise AssertionError(event)
+E           AssertionError: EventType.ACTION_PROPOSED
+
+tests/test_state_transitions.py:53: AssertionError
+____________ test_no_event_is_accepted_in_a_terminal_state[BLOCKED] ____________
+
+terminal = <ActionState.BLOCKED: 'BLOCKED'>
+
+    @pytest.mark.parametrize("terminal", sorted(TERMINAL_STATES, key=lambda s: s.value))
+    def test_no_event_is_accepted_in_a_terminal_state(terminal):
+        for event in ACTION_EVENTS:
+            with pytest.raises(InvalidTransitionError):
+>               _fire(_fresh(terminal), event)
+
+tests/test_state_transitions.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = AgentAction(action_id='A-1', request_id='R-1', request_text='SYNTHETIC test request text', tool_name='llm_generate', t...<ActionState.PROPOSED: 'PROPOSED'>, at=datetime.datetime(2026, 10, 8, 9, 0, tzinfo=datetime.timezone.utc), detail='')])
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    def _fire(a: AgentAction, event: E) -> None:
+        t = datetime(2026, 10, 8, 9, 5, 0, tzinfo=timezone.utc)
+        if event is E.ACTION_NORMALIZED:
+            a.normalize(t)
+        elif event is E.RISK_ASSESSED:
+            a.record_risk(RiskScore(0.1), "m", t)
+        elif event is E.ACTION_ALLOWED:
+            a.risk_score = RiskScore(0.1); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_REQUESTED:
+            a.risk_score = RiskScore(0.4); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.ACTION_BLOCKED:
+            a.risk_score = RiskScore(0.9); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_GRANTED:
+            a.grant_approval(REVIEWER, t)
+        elif event is E.HUMAN_APPROVAL_REJECTED:
+            a.reject_approval(REVIEWER, t)
+        elif event is E.TOOL_EXECUTION_STARTED:
+            a.start_execution(t)
+        elif event is E.TOOL_EXECUTION_COMPLETED:
+            a.complete_execution(t)
+        elif event is E.TOOL_EXECUTION_FAILED:
+            a.fail_execution(t)
+        else:  # pragma: no cover
+>           raise AssertionError(event)
+E           AssertionError: EventType.ACTION_PROPOSED
+
+tests/test_state_transitions.py:53: AssertionError
+___________ test_no_event_is_accepted_in_a_terminal_state[EXECUTED] ____________
+
+terminal = <ActionState.EXECUTED: 'EXECUTED'>
+
+    @pytest.mark.parametrize("terminal", sorted(TERMINAL_STATES, key=lambda s: s.value))
+    def test_no_event_is_accepted_in_a_terminal_state(terminal):
+        for event in ACTION_EVENTS:
+            with pytest.raises(InvalidTransitionError):
+>               _fire(_fresh(terminal), event)
+
+tests/test_state_transitions.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = AgentAction(action_id='A-1', request_id='R-1', request_text='SYNTHETIC test request text', tool_name='llm_generate', t...<ActionState.PROPOSED: 'PROPOSED'>, at=datetime.datetime(2026, 10, 8, 9, 0, tzinfo=datetime.timezone.utc), detail='')])
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    def _fire(a: AgentAction, event: E) -> None:
+        t = datetime(2026, 10, 8, 9, 5, 0, tzinfo=timezone.utc)
+        if event is E.ACTION_NORMALIZED:
+            a.normalize(t)
+        elif event is E.RISK_ASSESSED:
+            a.record_risk(RiskScore(0.1), "m", t)
+        elif event is E.ACTION_ALLOWED:
+            a.risk_score = RiskScore(0.1); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_REQUESTED:
+            a.risk_score = RiskScore(0.4); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.ACTION_BLOCKED:
+            a.risk_score = RiskScore(0.9); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_GRANTED:
+            a.grant_approval(REVIEWER, t)
+        elif event is E.HUMAN_APPROVAL_REJECTED:
+            a.reject_approval(REVIEWER, t)
+        elif event is E.TOOL_EXECUTION_STARTED:
+            a.start_execution(t)
+        elif event is E.TOOL_EXECUTION_COMPLETED:
+            a.complete_execution(t)
+        elif event is E.TOOL_EXECUTION_FAILED:
+            a.fail_execution(t)
+        else:  # pragma: no cover
+>           raise AssertionError(event)
+E           AssertionError: EventType.ACTION_PROPOSED
+
+tests/test_state_transitions.py:53: AssertionError
+_______ test_no_event_is_accepted_in_a_terminal_state[EXECUTION_FAILED] ________
+
+terminal = <ActionState.EXECUTION_FAILED: 'EXECUTION_FAILED'>
+
+    @pytest.mark.parametrize("terminal", sorted(TERMINAL_STATES, key=lambda s: s.value))
+    def test_no_event_is_accepted_in_a_terminal_state(terminal):
+        for event in ACTION_EVENTS:
+            with pytest.raises(InvalidTransitionError):
+>               _fire(_fresh(terminal), event)
+
+tests/test_state_transitions.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = AgentAction(action_id='A-1', request_id='R-1', request_text='SYNTHETIC test request text', tool_name='llm_generate', t...<ActionState.PROPOSED: 'PROPOSED'>, at=datetime.datetime(2026, 10, 8, 9, 0, tzinfo=datetime.timezone.utc), detail='')])
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    def _fire(a: AgentAction, event: E) -> None:
+        t = datetime(2026, 10, 8, 9, 5, 0, tzinfo=timezone.utc)
+        if event is E.ACTION_NORMALIZED:
+            a.normalize(t)
+        elif event is E.RISK_ASSESSED:
+            a.record_risk(RiskScore(0.1), "m", t)
+        elif event is E.ACTION_ALLOWED:
+            a.risk_score = RiskScore(0.1); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_REQUESTED:
+            a.risk_score = RiskScore(0.4); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.ACTION_BLOCKED:
+            a.risk_score = RiskScore(0.9); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_GRANTED:
+            a.grant_approval(REVIEWER, t)
+        elif event is E.HUMAN_APPROVAL_REJECTED:
+            a.reject_approval(REVIEWER, t)
+        elif event is E.TOOL_EXECUTION_STARTED:
+            a.start_execution(t)
+        elif event is E.TOOL_EXECUTION_COMPLETED:
+            a.complete_execution(t)
+        elif event is E.TOOL_EXECUTION_FAILED:
+            a.fail_execution(t)
+        else:  # pragma: no cover
+>           raise AssertionError(event)
+E           AssertionError: EventType.ACTION_PROPOSED
+
+tests/test_state_transitions.py:53: AssertionError
+___________ test_no_event_is_accepted_in_a_terminal_state[REJECTED] ____________
+
+terminal = <ActionState.REJECTED: 'REJECTED'>
+
+    @pytest.mark.parametrize("terminal", sorted(TERMINAL_STATES, key=lambda s: s.value))
+    def test_no_event_is_accepted_in_a_terminal_state(terminal):
+        for event in ACTION_EVENTS:
+            with pytest.raises(InvalidTransitionError):
+>               _fire(_fresh(terminal), event)
+
+tests/test_state_transitions.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = AgentAction(action_id='A-1', request_id='R-1', request_text='SYNTHETIC test request text', tool_name='llm_generate', t...<ActionState.PROPOSED: 'PROPOSED'>, at=datetime.datetime(2026, 10, 8, 9, 0, tzinfo=datetime.timezone.utc), detail='')])
+event = <EventType.ACTION_PROPOSED: 'ActionProposed'>
+
+    def _fire(a: AgentAction, event: E) -> None:
+        t = datetime(2026, 10, 8, 9, 5, 0, tzinfo=timezone.utc)
+        if event is E.ACTION_NORMALIZED:
+            a.normalize(t)
+        elif event is E.RISK_ASSESSED:
+            a.record_risk(RiskScore(0.1), "m", t)
+        elif event is E.ACTION_ALLOWED:
+            a.risk_score = RiskScore(0.1); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_REQUESTED:
+            a.risk_score = RiskScore(0.4); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.ACTION_BLOCKED:
+            a.risk_score = RiskScore(0.9); a.apply_decision(decide(a.risk_score, ExternalSideEffect.NO, POLICY), t)
+        elif event is E.HUMAN_APPROVAL_GRANTED:
+            a.grant_approval(REVIEWER, t)
+        elif event is E.HUMAN_APPROVAL_REJECTED:
+            a.reject_approval(REVIEWER, t)
+        elif event is E.TOOL_EXECUTION_STARTED:
+            a.start_execution(t)
+        elif event is E.TOOL_EXECUTION_COMPLETED:
+            a.complete_execution(t)
+        elif event is E.TOOL_EXECUTION_FAILED:
+            a.fail_execution(t)
+        else:  # pragma: no cover
+>           raise AssertionError(event)
+E           AssertionError: EventType.ACTION_PROPOSED
+
+tests/test_state_transitions.py:53: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_state_transitions.py::test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-PROPOSED]
+FAILED tests/test_state_transitions.py::test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-NORMALIZED]
+FAILED tests/test_state_transitions.py::test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-RISK_ASSESSED]
+FAILED tests/test_state_transitions.py::test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-ALLOWED]
+FAILED tests/test_state_transitions.py::test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-PENDING_APPROVAL]
+FAILED tests/test_state_transitions.py::test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-BLOCKED]
+FAILED tests/test_state_transitions.py::test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-APPROVED]
+FAILED tests/test_state_transitions.py::test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-REJECTED]
+FAILED tests/test_state_transitions.py::test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-EXECUTING]
+FAILED tests/test_state_transitions.py::test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-EXECUTED]
+FAILED tests/test_state_transitions.py::test_every_state_event_pair_is_allowed_iff_in_the_transition_table[ActionProposed-EXECUTION_FAILED]
+FAILED tests/test_state_transitions.py::test_no_event_is_accepted_in_a_terminal_state[BLOCKED]
+FAILED tests/test_state_transitions.py::test_no_event_is_accepted_in_a_terminal_state[EXECUTED]
+FAILED tests/test_state_transitions.py::test_no_event_is_accepted_in_a_terminal_state[EXECUTION_FAILED]
+FAILED tests/test_state_transitions.py::test_no_event_is_accepted_in_a_terminal_state[REJECTED]
+15 failed, 266 passed, 15 deselected in 0.92s
