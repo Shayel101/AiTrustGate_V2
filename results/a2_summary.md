@@ -6,7 +6,7 @@
 
 **Key invariants.** Six, e.g. a BLOCKed action never executes, a REVIEW action executes only after a granted approval, every event is audited, execution happens at most once.
 
-**Test method.** 331 pytest tests: each invariant has passing and deliberately violating inputs; all 110 state-event pairs are tested; documents are parsed against code; an independent oracle checks the decision rule; the A1 model is re-fitted and matches A1's committed predictions (0 of 40 differ).
+**Test method.** 339 pytest tests: each invariant has passing and deliberately violating inputs; all 110 state-event pairs are tested; documents are parsed against code; an independent oracle checks the decision rule; the A1 model is re-fitted and matches A1's committed predictions (0 of 40 differ).
 
 **Counterexample.** A1's harmful request `harmful_34` scores 0.3146, is ALLOWed and executed (simulated) while every invariant holds: invariants check process consistency, not risk-estimate quality. On A1's test split the REVIEW band is never used.
 

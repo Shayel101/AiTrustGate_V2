@@ -38,7 +38,7 @@ evaluation on data other than JBB-Behaviors.
 ## 3. Final test run
 
 Command: `python -m pytest -v > results/a2_test_output.txt` in the repository `.venv` (Python 3.13.7, pytest 9.1.1).
-Last line of the saved output: `============================= 331 passed in 12.84s ==============================` (0 failed, 0 skipped).
+Last line of the saved output: `============================= 339 passed in 13.87s ==============================` (0 failed, 0 skipped; 331 before `tests/test_tuning.py` with 8 tests was added).
 Breakdown by file: `tests/test_invariants.py` (INV-01..06 positive and violating cases, gate enforcement), `tests/test_state_transitions.py` (110 state x event pairs, flows, approvals, repeats),
 `tests/test_decision_rules.py` (table, oracle, boundaries, properties), `tests/test_validation.py` (enums, ids, scores, tool actions, timestamps, audit),
 `tests/test_model_consistency.py` (document/code consistency, domain independence, A1 consistency, counterexamples CX-1..CX-3).
@@ -60,7 +60,7 @@ Example tests used for the V-9 reference check: `tests/test_invariants.py::test_
 Procedure: new venv from `requirements.txt` (Python 3.13.7), `rsync` of the final working tree (without `.venv`, `.git`, caches) to `/tmp/a2_checkout`, then in that copy:
 `python src/prepare_data.py`, `python src/train.py`, `python src/run_walkthrough.py`, `python -m pytest -q`, `mypy src/trustgate --ignore-missing-imports`.
 Observed: `shasum -a 256 -c results/CHECKSUMS.sha256` all `OK` and identical to the repository's manifest; `diff` of the walkthrough output and of
-`results/raw/walkthrough_scenarios.json` against the repository's files was empty; `331 passed in 12.29s`; mypy `Success: no issues found in 11 source files`.
+`results/raw/walkthrough_scenarios.json` against the repository's files was empty; `331 passed in 12.29s` (at that time, before `tests/test_tuning.py` was added); mypy `Success: no issues found in 11 source files`.
 
 Additional A1 cross-check: the A1 README lists the hash prefix `aab3c4414b920479` for `results/model_comparison.txt`; the SHA-256 of the file regenerated in A2 starts with
 `aab3c4414b920479` (see `results/A2_CHECKSUMS.sha256`), i.e. the regenerated file is byte-identical to the one A1 describes.

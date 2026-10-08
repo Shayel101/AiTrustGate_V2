@@ -69,8 +69,9 @@ def build_pipeline(cfg: dict[str, Any]) -> Pipeline:
             weights[name] = float(cfg["lexicon_weight"])
     return Pipeline([
         ("features", FeatureUnion(parts, transformer_weights=weights)),
-        ("clf", LogisticRegression(C=cfg["C"], class_weight=cfg["class_weight"], max_iter=3000, random_state=SEED,
-                                   **({"l1_ratio": 1.0, "solver": "liblinear"} if cfg["penalty"] == "l1" else {}))),
+        ("clf", LogisticRegression(C=cfg["C"], class_weight=cfg["class_weight"], random_state=SEED,
+                                   **({"l1_ratio": 1.0, "solver": "liblinear", "max_iter": 100000}
+                                      if cfg["penalty"] == "l1" else {"max_iter": 3000}))),
     ])
 
 

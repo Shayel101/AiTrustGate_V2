@@ -1,0 +1,46 @@
+A1-standard-best (tfidf+lex w3, C2, min_df2)            AUC 0.7331±0.071  acc@0.5 0.6538
++glove mean w=0.1 C=0.05                                AUC 0.7392±0.066  acc@0.5 0.6687
++glove mean w=0.3 C=0.05                                AUC 0.7548±0.067  acc@0.5 0.6787
++glove mean w=1.0 C=0.05                                AUC 0.7422±0.067  acc@0.5 0.6625
++glove mean w=0.1 C=0.1                                 AUC 0.7423±0.068  acc@0.5 0.6687
++glove mean w=0.3 C=0.1                                 AUC 0.7575±0.069  acc@0.5 0.6800
++glove mean w=1.0 C=0.1                                 AUC 0.7330±0.070  acc@0.5 0.6538
++glove mean w=0.1 C=0.3                                 AUC 0.7523±0.069  acc@0.5 0.6800
++glove mean w=0.3 C=0.3                                 AUC 0.7541±0.069  acc@0.5 0.6763
++glove mean w=1.0 C=0.3                                 AUC 0.7269±0.068  acc@0.5 0.6462
++glove mean w=0.1 C=1.0                                 AUC 0.7583±0.072  acc@0.5 0.6675
++glove mean w=0.3 C=1.0                                 AUC 0.7469±0.072  acc@0.5 0.6587
++glove mean w=1.0 C=1.0                                 AUC 0.7150±0.072  acc@0.5 0.6388
++semantic proto feats w=0.5 C=0.3                       AUC 0.7580±0.068  acc@0.5 0.6462
++semantic proto feats w=0.5 C=1.0                       AUC 0.7534±0.069  acc@0.5 0.6637
++semantic proto feats w=0.5 C=2.0                       AUC 0.7458±0.074  acc@0.5 0.6700
++semantic proto feats w=1.0 C=0.3                       AUC 0.7622±0.066  acc@0.5 0.6562
++semantic proto feats w=1.0 C=1.0                       AUC 0.7564±0.070  acc@0.5 0.6575
++semantic proto feats w=1.0 C=2.0                       AUC 0.7497±0.074  acc@0.5 0.6625
++semantic proto feats w=2.0 C=0.3                       AUC 0.7619±0.065  acc@0.5 0.6650
++semantic proto feats w=2.0 C=1.0                       AUC 0.7564±0.070  acc@0.5 0.6625
++semantic proto feats w=2.0 C=2.0                       AUC 0.7491±0.075  acc@0.5 0.6637
+semantic + glove mean + lex + tfidf C=0.1               AUC 0.7697±0.071  acc@0.5 0.6650
+glove mean only C=0.1                                   AUC 0.7016±0.072  acc@0.5 0.6388
+semantic feats only C=0.1                               AUC 0.7650±0.083  acc@0.5 0.7000
+lex + semantic (no tfidf, no mean) C=0.1                AUC 0.7625±0.070  acc@0.5 0.6450
+semantic + glove mean + lex + tfidf C=0.3               AUC 0.7698±0.068  acc@0.5 0.6650
+glove mean only C=0.3                                   AUC 0.6922±0.070  acc@0.5 0.6275
+semantic feats only C=0.3                               AUC 0.7670±0.079  acc@0.5 0.6900
+lex + semantic (no tfidf, no mean) C=0.3                AUC 0.7655±0.065  acc@0.5 0.6562
+semantic + glove mean + lex + tfidf C=1.0               AUC 0.7631±0.073  acc@0.5 0.6587
+glove mean only C=1.0                                   AUC 0.6791±0.072  acc@0.5 0.6362
+semantic feats only C=1.0                               AUC 0.7633±0.076  acc@0.5 0.6863
+lex + semantic (no tfidf, no mean) C=1.0                AUC 0.7680±0.064  acc@0.5 0.6625
+---- round 2: per-seed max-similarity features + other learners
+per-seed sim (51 feats) LR C=0.01                       AUC 0.7255±0.101  acc@0.5 0.6800
+per-seed sim (51 feats) LR C=0.03                       AUC 0.7077±0.099  acc@0.5 0.6575
+per-seed sim (51 feats) LR C=0.1                        AUC 0.6752±0.091  acc@0.5 0.6150
+per-seed sim (51 feats) LR C=0.3                        AUC 0.6441±0.089  acc@0.5 0.5825
+semantic 6 feats + SVC rbf C=0.3                        AUC 0.7314±0.095  acc@0.5 0.6700
+semantic 6 feats + SVC rbf C=1                          AUC 0.7214±0.091  acc@0.5 0.6512
+semantic 6 feats + SVC rbf C=3                          AUC 0.6920±0.094  acc@0.5 0.6325
+semantic 6 feats + HistGB                               AUC 0.7440±0.066  acc@0.5 0.6700
+seed-sim + semantic + lexicon counts LR C=0.01          AUC 0.7589±0.091  acc@0.5 0.6925
+seed-sim + semantic + lexicon counts LR C=0.03          AUC 0.7420±0.089  acc@0.5 0.6750
+seed-sim + semantic + lexicon counts LR C=0.1           AUC 0.7120±0.090  acc@0.5 0.6538

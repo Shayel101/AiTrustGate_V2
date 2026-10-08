@@ -41,6 +41,15 @@ Nothing here is deleted from git history. Items CX-* are *model-level* counterex
 - A1: 11 of 20 benign test requests blocked (false-positive rate 0.55). A2 blocks the same 11 (SCN-B1 shows one, `benign_14`).
   Human review could in principle recover them, but they score above 0.50 and are BLOCKED, not REVIEWed.
 
+### CX-5 - negative result: tuning and word vectors do not reach 80% accuracy
+
+- **Question:** can the risk estimate reach 80% accuracy validly (no test-split tuning)?
+- **Evidence (all CV on the 160 training rows):**
+  - Configuration search over 20 / 512 / 1536 configurations (`results/tuning/*/`): best CV ROC-AUC 0.741 / 0.741 / 0.740 against 0.703-0.708 for A1; CV accuracy at 0.5 stays at 0.65-0.68. The result is a plateau (572 of 1536 configurations are within one standard error of the best).
+  - Pretrained GloVe-100 word vectors (`experiments/glove_features_experiment.py`, output in `results/tuning/glove_experiment_output.txt`): best CV AUC 0.770, best CV accuracy at 0.5 of 0.70 (6 interpretable similarity features alone). Mean-vector, per-seed similarity, SVM and gradient-boosting variants were no better.
+- **Conclusion:** with lexical and word-vector features and 160 training rows, about 0.70 accuracy is the ceiling observed. JBB-Behaviors pairs each benign request with a topically identical harmful one, so what separates them is intent, which needs a model that reads whole sentences. Sentence-embedding or LLM weights were not obtainable (Hugging Face is unreachable from this environment) and embeddings are an A1 non-goal. 80% was **not** reached and is not claimed.
+- **Validity notes:** the held-out split was read once for the `standard` selection (`summary.json`, `final_test_evaluated_once`); no later experiment read it. Phrases seen in test failures (e.g. "bribe") were deliberately not added to any lexicon.
+
 ### SCN-F1 as a scenario failure
 
 `src/run_walkthrough.py` prints `FAIL` for SCN-F1 against its pre-registered expectation and exits 0 on purpose: the failure is an
@@ -64,3 +73,4 @@ observation, not a program error.
 | R-1 | First `pytest` run: 15 failures in `tests/test_state_transitions.py` | `results/raw/a2_test_run1_failed_harness_defect.txt` (kept) | Test-harness defect, not a model defect: the generic test fired the creation event `ActionProposed`, which is by design not a transition, and the helper had no branch for it (`AssertionError: EventType.ACTION_PROPOSED`) | Excluded the creation and stateless events from the parametrization and added `test_creation_and_stateless_events_are_never_transitions`; re-run passed |
 | R-2 | A1 README cites `results/model_comparison.txt`, which is not in the repository | `git ls-tree` of the baseline | A1 artifact missing | Regenerated with `python src/compare_models.py`; numbers match the README table (CV means 0.6706 / 0.5575 / 0.5369 / 0.5350 / 0.4725 / 0.4719). Not an A2 failure, recorded for honesty |
 | R-3 | A1 inconsistency | `results/model_comparison.txt` labels the final model `C=0.3`, while `src/train.py` selects `C=0.2` by GridSearchCV and A1's reported metrics use 0.2 | The comparison script hard-codes C=0.3 | Left unchanged (A1 frozen); noted here and in `unresolved_assumptions.md` U-14 |
+| R-4 | 147 `Liblinear failed to converge` warnings in the first `wide` tuning run (log `results/tuning/wide_run_output.txt`, since removed from the working tree; it remains in git history, commit `8b66949`) | the log | L1 penalty with large C (10, 20) on liblinear; no L1 configuration was ever a winner | L1 removed from the presets (`configs/tuning_grid.json`), `max_iter` raised for the optional L1 path; quick preset re-run with convergence warnings escalated to errors: 0 warnings. The committed `standard`/`wide` result files were produced with L1 still in the grid and are left as produced |

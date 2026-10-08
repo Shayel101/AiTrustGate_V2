@@ -6,7 +6,7 @@
     "n_repeats": 3
   },
   "seed": 42,
-  "search_seconds": 9.126853311005107,
+  "search_seconds": 8.443576359997678,
   "selection_rule": "max mean CV ROC-AUC on training split; tie -> lower log loss",
   "best_config": {
     "C": 0.1,
