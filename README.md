@@ -38,7 +38,9 @@ nb = nbformat.read("notebooks/a2_walkthrough.ipynb", as_version=4)
 NotebookClient(nb, timeout=120, resources={"metadata": {"path": "notebooks"}}).execute()
 nbformat.write(nb, "notebooks/a2_walkthrough.ipynb")
 EOF
-# 8. integrity manifest of the A2 outputs
+# 8. optional: configuration search on the training split only (presets quick | standard | wide in configs/tuning_grid.json)
+python src/tune_config.py --preset standard            # add --final-test to evaluate the held-out split ONCE
+# 9. integrity manifest of the A2 outputs
 shasum -a 256 -c results/A2_CHECKSUMS.sha256
 ```
 

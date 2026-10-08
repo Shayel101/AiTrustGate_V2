@@ -1,0 +1,106 @@
+preset=standard: 512 configurations x 15 folds, train n=160; test split not read unless --final-test
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/sha/Desktop/AiTrustGate/.venv/lib/python3.13/site-packages/sklearn/svm/_base.py:1295: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+search time 206.8s (0.40s/config wall)
+
+Top 10 by mean CV ROC-AUC (training split only):
+   auc_mean  auc_std  acc_mean  recall_mean  precision_mean  logloss_mean  brier_mean                                                                                                                                                     config
+0    0.7411   0.0747    0.6604       0.6917          0.6558        0.5928      0.2083  {"C": 2.0, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 3, "min_df": 2, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": true}
+1    0.7409   0.0746    0.6562       0.6833          0.6534        0.5907      0.2075  {"C": 2.0, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 1, "min_df": 2, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": true}
+2    0.7409   0.0753    0.6625       0.6917          0.6590        0.5924      0.2081  {"C": 2.0, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 2, "min_df": 2, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": true}
+3    0.7409   0.0805    0.6521       0.6583          0.6524        0.6166      0.2176  {"C": 5.0, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 1, "min_df": 2, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": true}
+4    0.7404   0.0736    0.6667       0.7417          0.6478        0.5844      0.2041  {"C": 1.0, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 1, "min_df": 2, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": true}
+5    0.7404   0.0816    0.6583       0.6667          0.6582        0.6184      0.2181  {"C": 5.0, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 3, "min_df": 2, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": true}
+6    0.7396   0.0765    0.6708       0.7542          0.6489        0.5861      0.2049  {"C": 1.0, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 2, "min_df": 2, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": true}
+7    0.7391   0.0810    0.6583       0.6667          0.6582        0.6182      0.2181  {"C": 5.0, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 2, "min_df": 2, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": true}
+8    0.7388   0.0766    0.6687       0.7583          0.6459        0.5866      0.2050  {"C": 1.0, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 3, "min_df": 2, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": true}
+9    0.7375   0.0757    0.6687       0.8042          0.6365        0.5836      0.2031  {"C": 0.5, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 1, "min_df": 2, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": true}
+
+A1 reference configuration on the same folds:
+     auc_mean  auc_std  acc_mean  recall_mean  precision_mean  logloss_mean  brier_mean                                                                                                                                                     config
+245    0.7078   0.0758    0.6750       0.8583          0.6320        0.5919      0.2056  {"C": 0.2, "char": null, "class_weight": null, "lexicon": true, "lexicon_weight": 1, "min_df": 1, "ngram": [1, 1], "penalty": "l2", "sublinear_tf": true}
+
+Paired fold-wise AUC difference (best - A1): mean +0.0333, sd 0.0271, folds better 13/15
+configurations within 1 repeat-SE of the best: 294 (a wide plateau means the choice is not sharply identified)
+
+Effect of each factor level (best / mean CV AUC over configs using it):
+        factor  level  n_configs  best_auc  mean_auc  best_recall_at_0.5
+         ngram [1, 1]        256    0.7411    0.6790              0.6917
+         ngram [1, 2]        256    0.7344    0.6672              0.8125
+        min_df      1        256    0.7363    0.6644              0.7542
+        min_df      2        256    0.7411    0.6818              0.6917
+  sublinear_tf   true        512    0.7411    0.6731              0.6917
+          char [3, 5]        256    0.7363    0.6685              0.7542
+          char   null        256    0.7411    0.6777              0.6917
+       lexicon  false        128    0.6320    0.5522              0.6083
+       lexicon   true        384    0.7411    0.7134              0.6917
+lexicon_weight      1        256    0.7409    0.6310              0.6833
+lexicon_weight      2        128    0.7409    0.7151              0.6917
+lexicon_weight      3        128    0.7411    0.7153              0.6917
+       penalty   "l1"        256    0.7363    0.6787              0.7542
+       penalty   "l2"        256    0.7411    0.6674              0.6917
+             C   0.05         64    0.7339    0.6632              0.8625
+             C    0.1         64    0.7331    0.6719              0.8625
+             C    0.2         64    0.7339    0.6719              0.8458
+             C    0.5         64    0.7375    0.6733              0.8042
+             C    1.0         64    0.7404    0.6837              0.7417
+             C   10.0         64    0.7320    0.6625              0.6583
+             C    2.0         64    0.7411    0.6845              0.6917
+             C    5.0         64    0.7409    0.6735              0.6583
+
+Out-of-fold policy thresholds (constraint: harmful ALLOW rate <= 0.05, review load <= 0.3): {'block_above': 0.45, 'review_lower': 0.15, 'harmful_allow_rate': 0.0125, 'harmful_block_rate': 0.7375, 'benign_block_rate': 0.425, 'benign_review_rate': 0.325, 'benign_allow_rate': 0.25, 'review_load': 0.2875}
+
+FINAL TEST (held-out split, evaluated once):
+  A1 reference, policy 0.35/0.50             AUC 0.833 acc@0.5 0.700 recall@0.5 0.950 | benign {'ALLOW': 9, 'REVIEW': 0, 'BLOCK': 11} | harmful {'ALLOW': 1, 'REVIEW': 0, 'BLOCK': 19}
+  selected config, policy 0.35/0.50          AUC 0.870 acc@0.5 0.750 recall@0.5 0.900 | benign {'ALLOW': 10, 'REVIEW': 2, 'BLOCK': 8} | harmful {'ALLOW': 1, 'REVIEW': 1, 'BLOCK': 18}
+  selected config, OOF-tuned thresholds      AUC 0.870 acc@0.5 0.750 recall@0.5 0.900 | benign {'ALLOW': 4, 'REVIEW': 8, 'BLOCK': 8} | harmful {'ALLOW': 0, 'REVIEW': 2, 'BLOCK': 18}
+
+wrote /Users/sha/Desktop/AiTrustGate/results/tuning/standard/all_configs.csv, threshold_table_oof.csv, summary.json

@@ -1,0 +1,62 @@
+{
+  "preset": "quick",
+  "n_configs": 20,
+  "cv": {
+    "n_splits": 5,
+    "n_repeats": 3
+  },
+  "seed": 42,
+  "search_seconds": 9.126853311005107,
+  "selection_rule": "max mean CV ROC-AUC on training split; tie -> lower log loss",
+  "best_config": {
+    "C": 0.1,
+    "char": null,
+    "class_weight": null,
+    "lexicon": true,
+    "lexicon_weight": 2,
+    "min_df": 1,
+    "ngram": [
+      1,
+      1
+    ],
+    "penalty": "l2",
+    "sublinear_tf": true
+  },
+  "best_cv": {
+    "auc_mean": 0.7111979166666667,
+    "auc_std": 0.0788051986330675,
+    "acc_mean": 0.6770833333333334,
+    "recall_mean": 0.8625,
+    "precision_mean": 0.6331257958923863,
+    "logloss_mean": 0.5890535374324368,
+    "brier_mean": 0.2049402818414713
+  },
+  "a1_reference_cv": {
+    "auc_mean": 0.7078125,
+    "auc_std": 0.07582821783341388,
+    "acc_mean": 0.675,
+    "recall_mean": 0.8583333333333333,
+    "precision_mean": 0.6320146847812752,
+    "logloss_mean": 0.5918890110615318,
+    "brier_mean": 0.20564770878695632
+  },
+  "paired_auc_diff_mean": 0.0033854166666666668,
+  "paired_auc_diff_sd": 0.007529600153542166,
+  "folds_better": 7,
+  "n_folds": 15,
+  "configs_within_1_se": 20,
+  "oof_thresholds": {
+    "block_above": 0.5,
+    "review_lower": 0.25,
+    "harmful_allow_rate": 0.0125,
+    "harmful_block_rate": 0.8625,
+    "benign_block_rate": 0.5125,
+    "benign_review_rate": 0.3,
+    "benign_allow_rate": 0.1875,
+    "review_load": 0.2125
+  },
+  "constraints": {
+    "max_harmful_allow_rate": 0.05,
+    "max_review_load": 0.3
+  }
+}

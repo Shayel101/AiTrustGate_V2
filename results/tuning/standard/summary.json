@@ -1,0 +1,169 @@
+{
+  "preset": "standard",
+  "n_configs": 512,
+  "cv": {
+    "n_splits": 5,
+    "n_repeats": 3
+  },
+  "seed": 42,
+  "search_seconds": 206.80969647999882,
+  "selection_rule": "max mean CV ROC-AUC on training split; tie -> lower log loss",
+  "best_config": {
+    "C": 2.0,
+    "char": null,
+    "class_weight": null,
+    "lexicon": true,
+    "lexicon_weight": 3,
+    "min_df": 2,
+    "ngram": [
+      1,
+      1
+    ],
+    "penalty": "l2",
+    "sublinear_tf": true
+  },
+  "best_cv": {
+    "auc_mean": 0.7411458333333333,
+    "auc_std": 0.0746556039516719,
+    "acc_mean": 0.6604166666666667,
+    "recall_mean": 0.6916666666666667,
+    "precision_mean": 0.6558260538910694,
+    "logloss_mean": 0.5927658675389652,
+    "brier_mean": 0.2082548321537946
+  },
+  "a1_reference_cv": {
+    "auc_mean": 0.7078125,
+    "auc_std": 0.07582821783341388,
+    "acc_mean": 0.675,
+    "recall_mean": 0.8583333333333333,
+    "precision_mean": 0.6320146847812752,
+    "logloss_mean": 0.5918890110615318,
+    "brier_mean": 0.20564770878695632
+  },
+  "paired_auc_diff_mean": 0.03333333333333333,
+  "paired_auc_diff_sd": 0.027133367245064804,
+  "folds_better": 13,
+  "n_folds": 15,
+  "configs_within_1_se": 294,
+  "oof_thresholds": {
+    "block_above": 0.45,
+    "review_lower": 0.15,
+    "harmful_allow_rate": 0.0125,
+    "harmful_block_rate": 0.7375,
+    "benign_block_rate": 0.425,
+    "benign_review_rate": 0.325,
+    "benign_allow_rate": 0.25,
+    "review_load": 0.2875
+  },
+  "constraints": {
+    "max_harmful_allow_rate": 0.05,
+    "max_review_load": 0.3
+  },
+  "final_test_evaluated_once": [
+    {
+      "name": "A1 reference, policy 0.35/0.50",
+      "config": {
+        "ngram": [
+          1,
+          1
+        ],
+        "min_df": 1,
+        "sublinear_tf": true,
+        "char": null,
+        "lexicon": true,
+        "lexicon_weight": 1,
+        "class_weight": null,
+        "penalty": "l2",
+        "C": 0.2
+      },
+      "block_above": 0.5,
+      "review_lower": 0.35,
+      "test_auc": 0.8325,
+      "test_accuracy_at_0.5": 0.7,
+      "test_recall_at_0.5": 0.95,
+      "test_precision_at_0.5": 0.6333333333333333,
+      "decisions_by_true_label": {
+        "benign": {
+          "ALLOW": 9,
+          "REVIEW": 0,
+          "BLOCK": 11
+        },
+        "harmful": {
+          "ALLOW": 1,
+          "REVIEW": 0,
+          "BLOCK": 19
+        }
+      }
+    },
+    {
+      "name": "selected config, policy 0.35/0.50",
+      "config": {
+        "C": 2.0,
+        "char": null,
+        "class_weight": null,
+        "lexicon": true,
+        "lexicon_weight": 3,
+        "min_df": 2,
+        "ngram": [
+          1,
+          1
+        ],
+        "penalty": "l2",
+        "sublinear_tf": true
+      },
+      "block_above": 0.5,
+      "review_lower": 0.35,
+      "test_auc": 0.87,
+      "test_accuracy_at_0.5": 0.75,
+      "test_recall_at_0.5": 0.9,
+      "test_precision_at_0.5": 0.6923076923076923,
+      "decisions_by_true_label": {
+        "benign": {
+          "ALLOW": 10,
+          "REVIEW": 2,
+          "BLOCK": 8
+        },
+        "harmful": {
+          "ALLOW": 1,
+          "REVIEW": 1,
+          "BLOCK": 18
+        }
+      }
+    },
+    {
+      "name": "selected config, OOF-tuned thresholds",
+      "config": {
+        "C": 2.0,
+        "char": null,
+        "class_weight": null,
+        "lexicon": true,
+        "lexicon_weight": 3,
+        "min_df": 2,
+        "ngram": [
+          1,
+          1
+        ],
+        "penalty": "l2",
+        "sublinear_tf": true
+      },
+      "block_above": 0.45,
+      "review_lower": 0.15,
+      "test_auc": 0.87,
+      "test_accuracy_at_0.5": 0.75,
+      "test_recall_at_0.5": 0.9,
+      "test_precision_at_0.5": 0.6923076923076923,
+      "decisions_by_true_label": {
+        "benign": {
+          "ALLOW": 4,
+          "REVIEW": 8,
+          "BLOCK": 8
+        },
+        "harmful": {
+          "ALLOW": 0,
+          "REVIEW": 2,
+          "BLOCK": 18
+        }
+      }
+    }
+  ]
+}

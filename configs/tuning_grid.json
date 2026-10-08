@@ -1,0 +1,39 @@
+{
+  "_comment": "Search ranges for src/tune_config.py: full cross product of the listed values (lexicon_weight is ignored when lexicon is false). CV runs on the TRAINING split only. class_weight 'balanced' was observed to be a no-op (identical CV scores) because the training split is exactly 80/80, so it is not searched.",
+  "quick": {
+    "ngram": [[1, 1], [1, 2]],
+    "min_df": [1],
+    "sublinear_tf": [true],
+    "char": [null],
+    "lexicon": [true],
+    "lexicon_weight": [1, 2],
+    "class_weight": [null],
+    "C": [0.1, 0.2, 0.5, 1.0, 2.0],
+    "cv": {"n_splits": 5, "n_repeats": 3},
+    "penalty": ["l2"]
+  },
+  "standard": {
+    "ngram": [[1, 1], [1, 2]],
+    "min_df": [1, 2],
+    "sublinear_tf": [true],
+    "char": [null, [3, 5]],
+    "lexicon": [false, true],
+    "lexicon_weight": [1, 2, 3],
+    "class_weight": [null],
+    "C": [0.05, 0.1, 0.2, 0.5, 1.0, 2.0, 5.0, 10.0],
+    "cv": {"n_splits": 5, "n_repeats": 3},
+    "penalty": ["l2", "l1"]
+  },
+  "wide": {
+    "ngram": [[1, 1], [1, 2]],
+    "min_df": [1, 2, 3, 5],
+    "sublinear_tf": [true, false],
+    "char": [null, [3, 5]],
+    "lexicon": [false, true],
+    "lexicon_weight": [1, 3],
+    "class_weight": [null],
+    "C": [0.1, 0.2, 0.5, 1.0, 2.0, 5.0, 10.0, 20.0],
+    "cv": {"n_splits": 5, "n_repeats": 5},
+    "penalty": ["l2", "l1"]
+  }
+}
