@@ -1,12 +1,9 @@
 # Invariants
 
 Six invariants, implemented as pure predicates in `src/trustgate/invariants.py` and enforced at runtime by
-`TrustGate` after every audited transition (`assert_invariants`). Each has a passing case, at least one deliberately
-violating input, and a test asserting detection. "Holds" means the predicate returns `True`.
+`TrustGate` after every audited transition (`assert_invariants`). Each has a passing case, at least one deliberately violating input, and a test asserting detection. "Holds" means the predicate returns `True`.
 
-A1 link: A1's gate is a pre-filter - a request judged harmful must not reach the AI system (A1-WF, A1-SC-A) and false
-negatives are the more severe failure (A1-COST). INV-02 and INV-05 derive from A1-NS (human review) and the A1-PROB weakness
-"not independently auditable" respectively and are A2 DESIGN DECISIONS.
+A1 link: A1's gate is a pre-filter - a request judged harmful must not reach the AI system (A1-WF, A1-SC-A) and false negatives are the more severe failure (A1-COST). INV-02 and INV-05 derive from A1-NS (human review) and the A1-PROB weakness "not independently auditable" respectively and are A2 DESIGN DECISIONS.
 
 ```
 Invariant ID: INV-01
@@ -112,6 +109,5 @@ Automated test: tests/test_invariants.py::test_inv06_valid_histories_hold,
 
 ## What the invariants do **not** guarantee
 
-They check *process consistency*, not whether the risk estimate is right. A harmful request that the model scores low is
-ALLOWed with every invariant satisfied (counterexample CX-1, `failures_and_counterexamples.md`;
+They check *process consistency*, not whether the risk estimate is right. A harmful request that the model scores low is ALLOWed with every invariant satisfied (counterexample CX-1, `failures_and_counterexamples.md`;
 `tests/test_model_consistency.py::test_counterexample_cx1_a_harmful_request_is_allowed_while_every_invariant_holds`).

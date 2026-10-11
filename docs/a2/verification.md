@@ -2,8 +2,7 @@
 
 All results in this file come from commands actually executed in this repository (Python 3.13.7, packages in `requirements-lock.txt`).
 Raw output: `results/a2_test_output.txt` (pytest), `results/a2_walkthrough_output.txt` (walkthrough), `results/raw/a2_test_run1_failed_harness_defect.txt` (retained failed first run).
-Limits of this evidence: see the note at the top of [ai-use-log.md](ai-use-log.md) - the same author (an AI assistant) wrote code, tests and documents; the
-student's own review is pending.
+Limits of this evidence: see the note at the top of [ai-use-log.md](ai-use-log.md) - the same author (an AI assistant) wrote code, tests and documents; the student's own review is pending.
 
 ## 1. Verification methods and what each one independently checks
 

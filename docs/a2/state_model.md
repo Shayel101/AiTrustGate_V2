@@ -67,8 +67,7 @@ Every guard failure raises an error and leaves the state unchanged (`ValidationE
 
 ## 4. Forbidden transitions (all other (state, event) pairs)
 
-Each of the 11 states x 10 transition events = 110 pairs is tested; the 11 above must succeed, the other 99 must raise
-`InvalidTransitionError` and leave the state unchanged
+Each of the 11 states x 10 transition events = 110 pairs is tested; the 11 above must succeed, the other 99 must raise `InvalidTransitionError` and leave the state unchanged
 (`tests/test_state_transitions.py::test_every_state_event_pair_is_allowed_iff_in_the_transition_table`). The ones that matter most:
 
 | Forbidden | Why | Test |

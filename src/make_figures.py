@@ -368,7 +368,7 @@ def fig6a_radar(sc):
     ax.set_yticklabels(["0.2", "0.4", "0.6", "0.8", "1.0"], fontsize=8, color=GREY)
     ax.plot(np.linspace(0, 2 * np.pi, 200), [0.8] * 200, color=GREEN, lw=1, ls=":")
     ax.legend(loc="upper left", bbox_to_anchor=(0.0, -0.02), fontsize=9, frameon=False)
-    fig.suptitle("Figure 6a. Performance profile on the held-out test split (n = 40; 20 harmful, 20 benign)", x=0.04, ha="left", fontsize=13, fontweight="bold")
+    fig.suptitle("Figure 6. Performance profile on the held-out test split (n = 40; 20 harmful, 20 benign)", x=0.04, ha="left", fontsize=13, fontweight="bold")
 
     tab = fig.add_axes([0.64, 0.06, 0.35, 0.80])
     tab.axis("off")
@@ -381,7 +381,7 @@ def fig6a_radar(sc):
         for j, (k, v) in enumerate(m.items()):
             tab.text(0.03, top - 0.085 - j * 0.026, f"{k.split(chr(10))[0]:<12}{v:.3f}", fontsize=7.8, va="top", family="monospace")
     tab.text(0, 0.0, "Dotted ring = 0.80. Recall is the A1 priority (a missed\nharmful request is the severe error), but read it with\nspecificity: flagging everything gives recall 1.0 and\nspecificity 0. 20 harmful rows: recall moves in steps\nof 0.05; intervals are wide (19/20 -> 0.76 to 0.99).", fontsize=7.6, color=GREY, va="bottom")
-    save(fig, "fig6a_radar_performance.png")
+    save(fig, "fig6_radar_performance.png")
 
 
 def fig6b_roc(sc):
@@ -409,9 +409,9 @@ def fig6b_roc(sc):
         ax.set_ylim(0, 1.03)
         ax.grid(alpha=0.25)
         ax.legend(loc="lower right", fontsize=8.5)
-    fig.suptitle("Figure 6b. ROC curves: A1 reference vs. selected configuration", x=0.06, ha="left", fontsize=13, fontweight="bold")
+    fig.suptitle("Figure 7. ROC curves: A1 reference vs. selected configuration", x=0.06, ha="left", fontsize=13, fontweight="bold")
     fig.tight_layout(rect=(0, 0, 1, 0.94))
-    save(fig, "fig6b_roc_curves.png")
+    save(fig, "fig7_roc_curves.png")
 
 
 def main() -> None:

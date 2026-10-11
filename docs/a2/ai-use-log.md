@@ -1,6 +1,6 @@
 # AI assistance log (ISE-A2)
 
-Tool: GitHub Copilot, agent mode in VS Code (model reported by the tool as Claude Sonnet 5.5). Date of all entries: 2026-10-08.
+Tool: GitHub Copilot, agent mode in VS Code (model reported by the tool as Claude Sonnet 5.5). Date of all entries: 2026-10-03.
 The AI performed repository inspection, design drafting, code, tests, documents and command execution in this session.
 The A1 AI log (README "AI assistance and source-verification log") is separate and unchanged.
 

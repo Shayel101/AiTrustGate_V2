@@ -65,5 +65,4 @@ A1 IDs are defined in [a1_baseline.md](a1_baseline.md) (A1 itself did not number
 
 ## 4. A1 items deliberately **not** traced to A2 behavior
 
-A1-STK (stakeholder map), A1-SRC / A1-EV-* (sources), A1-AI (A1's AI log), A1-STOP-1/3: they are A1 evidence that A2 relies on or
-leaves open; they have no executable counterpart in the A2 model. Open points: `unresolved_assumptions.md`.
+A1-STK (stakeholder map), A1-SRC / A1-EV-* (sources), A1-AI (A1's AI log), A1-STOP-1/3: they are A1 evidence that A2 relies on or leaves open; they have no executable counterpart in the A2 model. Open points: `unresolved_assumptions.md`.

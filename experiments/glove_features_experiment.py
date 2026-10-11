@@ -1,9 +1,3 @@
-"""Negative-result experiment: do pretrained GloVe word vectors lift the risk estimate to ~80% accuracy?
-
-Needs `pip install gensim` (not in requirements.txt) and downloads glove-wiki-gigaword-100 (128 MB, GitHub-hosted) on first run.
-CV on the TRAINING split only; the held-out split is never read. Run: python experiments/glove_features_experiment.py
-Seed words below were written from general knowledge of harm categories, not from any dataset row.
-"""
 import os, re, sys, json, warnings
 import numpy as np, pandas as pd
 from gensim.models import KeyedVectors

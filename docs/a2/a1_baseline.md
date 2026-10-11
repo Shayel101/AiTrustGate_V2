@@ -13,13 +13,13 @@ Labels used in all A2 documents:
 
 ## 1. Inventory of A1 artifacts
 
-A1 documentation lives in [README.md](../../README.md) (the A1 author merged `doc.md`, `docs/evidence_ledger.md`,
+A1 documentation lives in [README-A1.md](../../README-A1.md) (the A1 author merged `doc.md`, `docs/evidence_ledger.md`,
 `docs/failure_analysis.md` and `docs/ISE_A1_evidence_brief.md` into it; the pre-merge files still exist in git commit
-`0909099`). The assignment brief is [docs/ISE_A1_assignment_brief.txt](../ISE_A1_assignment_brief.txt).
+`0909099`). The assignment brief is [docs/ISE_assignment_brief.txt](../ISE_assignment_brief.txt).
 
 | Required item | Found? | Location | A1 reference ID (assigned in A2; A1 did not number items) |
 |---|---|---|---|
-| Problem statement | Yes | README "Purpose and A1 problem" | A1-PROB |
+| Problem statement | Yes | README-A1 "Purpose and A1 problem" | A1-PROB |
 | Evidence ledger | Yes (6 claims) | README "Evidence ledger" | A1-EV-1 ... A1-EV-6 |
 | Stakeholder information | Yes (5 stakeholders; analysis, **not** interviews) | README "Stakeholder map" | A1-STK |
 | Current workflow | Yes | README "Workflow", "Purpose" | A1-WF |
